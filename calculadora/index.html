@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Sistemas Numéricos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div>
+            <h1>Calculadora de Sistemas Numéricos</h1>
+            <p class="subtitulo">
+                Conversión de sistemas numéricos y operaciones lógicas
+            </p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- CONFIGURACIÓN DEL PROCESAMIENTO -->
+
+        <section class="panel">
+
+            <div class="titulo-panel">
+                <span>01</span>
+                <h2>Configuración del registro</h2>
+            </div>
+
+            <div class="configuracion">
+
+                <div class="campo">
+                    <label for="entradaNumero">
+                        Valor de entrada
+                    </label>
+
+                    <input
+                        type="text"
+                        id="entradaNumero"
+                        placeholder="Escribe un número"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="sistemaNumerico">
+                        Sistema numérico
+                    </label>
+
+                    <select id="sistemaNumerico">
+                        <option value="2">Binario — Base 2</option>
+                        <option value="8">Octal — Base 8</option>
+                        <option value="10" selected>Decimal — Base 10</option>
+                        <option value="16">Hexadecimal — Base 16</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="arquitectura">
+                        Tamaño del registro
+                    </label>
+
+                    <select id="arquitectura">
+                        <option value="8">Byte — 8 bits</option>
+                        <option value="16">Word — 16 bits</option>
+                        <option value="32">DWord — 32 bits</option>
+                        <option value="64">QWord — 64 bits</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button id="procesarNumero">
+                PROCESAR VALOR
+            </button>
+
+            <div id="estado"></div>
+
+        </section>
+
+
+        <!-- REGISTROS DE SALIDA -->
+
+        <section class="panel">
+
+            <div class="titulo-panel">
+                <span>02</span>
+                <h2>Registros de salida</h2>
+            </div>
+
+            <div class="tabla-registros">
+
+                <div class="registro">
+                    <div class="registro-nombre">
+                        <strong>BIN</strong>
+                        <span>BASE 2</span>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="salidaBinaria"
+                        readonly
+                    >
+                </div>
+
+                <div class="registro">
+                    <div class="registro-nombre">
+                        <strong>OCT</strong>
+                        <span>BASE 8</span>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="salidaOctal"
+                        readonly
+                    >
+                </div>
+
+                <div class="registro">
+                    <div class="registro-nombre">
+                        <strong>DEC</strong>
+                        <span>BASE 10</span>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="salidaDecimal"
+                        readonly
+                    >
+                </div>
+
+                <div class="registro">
+                    <div class="registro-nombre">
+                        <strong>HEX</strong>
+                        <span>BASE 16</span>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="salidaHexadecimal"
+                        readonly
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIDAD LOGICO ARITMETICA -->
+
+        <section class="panel alu">
+
+            <div class="titulo-panel">
+                <span>03</span>
+                <h2>Unidad Lógica Aritmética</h2>
+            </div>
+
+            <p class="descripcion">
+                Introduce dos registros binarios para realizar operaciones
+                lógicas bit a bit.
+            </p>
+
+            <div class="registros-alu">
+
+                <div class="registro-entrada">
+                    <label for="registroA">REGISTRO A</label>
+
+                    <input
+                        type="text"
+                        id="registroA"
+                        placeholder="1010"
+                    >
+                </div>
+
+                <div class="operador-central">
+                    ALU
+                </div>
+
+                <div class="registro-entrada">
+                    <label for="registroB">REGISTRO B</label>
+
+                    <input
+                        type="text"
+                        id="registroB"
+                        placeholder="1100"
+                    >
+                </div>
+
+            </div>
+
+            <button id="ejecutarALU">
+                EJECUTAR ALU
+            </button>
+
+            <div class="salidas-logicas">
+
+                <div>
+                    <span>AND</span>
+                    <input type="text" id="salidaAND" readonly>
+                </div>
+
+                <div>
+                    <span>OR</span>
+                    <input type="text" id="salidaOR" readonly>
+                </div>
+
+                <div>
+                    <span>XOR</span>
+                    <input type="text" id="salidaXOR" readonly>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Digital Number Lab · Proyecto académico</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

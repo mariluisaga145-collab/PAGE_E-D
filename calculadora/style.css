@@ -1,0 +1,376 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef2f7;
+    color: #172033;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    background: #111827;
+    color: white;
+    padding: 42px 8%;
+    border-bottom: 5px solid #14b8a6;
+}
+
+.encabezado h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+    margin: 6px 0 8px;
+}
+
+.etiqueta {
+    color: #5eead4;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitulo {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+main {
+    width: 88%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+
+/* =========================================
+   PANELES
+========================================= */
+
+.panel {
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+}
+
+.titulo-panel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.titulo-panel span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #14b8a6;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.titulo-panel h2 {
+    font-size: 21px;
+    color: #1e293b;
+}
+
+
+/* =========================================
+   CONFIGURACIÓN DE ENTRADA
+========================================= */
+
+.configuracion {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+input,
+select {
+    width: 100%;
+    height: 45px;
+    padding: 0 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.12);
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    height: 46px;
+    border: none;
+    border-radius: 6px;
+    background: #0f766e;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #115e59;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   MENSAJE DE ESTADO
+========================================= */
+
+#estado {
+    margin-top: 15px;
+    min-height: 20px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   REGISTROS DE SALIDA
+========================================= */
+
+.tabla-registros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.registro {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+.registro-nombre {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro-nombre strong {
+    color: #0f766e;
+    font-size: 15px;
+}
+
+.registro-nombre span {
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.registro input {
+    background: white;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: #111827;
+}
+
+
+/* =========================================
+   SECCIÓN ALU
+========================================= */
+
+.alu {
+    border-top: 4px solid #14b8a6;
+}
+
+.descripcion {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.registros-alu {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: end;
+    gap: 20px;
+}
+
+.registro-entrada {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro-entrada label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.registro-entrada input {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+.operador-central {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111827;
+    color: #5eead4;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   RESULTADOS LÓGICOS
+========================================= */
+
+.salidas-logicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.salidas-logicas div {
+    display: flex;
+    flex-direction: column;
+}
+
+.salidas-logicas span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0f766e;
+    margin-bottom: 7px;
+}
+
+.salidas-logicas input {
+    background: #f8fafc;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ADAPTACIÓN PARA CELULAR
+========================================= */
+
+@media (max-width: 750px) {
+
+    main {
+        width: 94%;
+    }
+
+    .encabezado {
+        padding: 32px 6%;
+    }
+
+    .encabezado h1 {
+        font-size: 27px;
+    }
+
+    .configuracion {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla-registros {
+        grid-template-columns: 1fr;
+    }
+
+    .registros-alu {
+        grid-template-columns: 1fr;
+    }
+
+    .operador-central {
+        width: 100%;
+    }
+
+    .salidas-logicas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .panel {
+        padding: 20px;
+    }
+
+    .registro {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-panel h2 {
+        font-size: 18px;
+    }
+}
